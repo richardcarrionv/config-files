@@ -4,6 +4,8 @@ CapsLock::Ctrl
 
 Ctrl::Capslock
 
+LControl & RAlt::RAlt
+
 ; LCtrl + LAlt + hjkl == Win + Flechas
 
 ^!k::
