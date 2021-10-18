@@ -1,24 +1,28 @@
-﻿
-; ^ ----> Ctrl 
-; ! ----> Alt
+﻿#SingleInstance Force
 
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 CapsLock::Ctrl
-LCtrl::Capslock
 
-; "Remapear" teclas de windows
-^!h::
-    send #{Left}
+Ctrl::Capslock
+
+; LCtrl + LAlt + hjkl == Win + Flechas
+
+^!k::
+    send, #{Up}
     return
 ^!j::
-    send #{Down}
+    send, #{Down}
     return
-^!k::
-    send #{Up}
+^!h::
+    send,  #{Left}
     return
 ^!l::
-    send #{Right}
+    send, #{Right}
     return
+^!r::
+    send, {F5}
+    return 
+^!q::
+    send, !{F4}
+    return 
+
+
