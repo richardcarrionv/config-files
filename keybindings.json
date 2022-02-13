@@ -1,0 +1,32 @@
+// Coloque sus atajos de teclado en este archivo para sobreescribir los valores predeterminados
+[
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.view.explorer",
+
+    },
+    {
+        "key": "ctrl+n",
+        "when": "sideBarVisible",
+        "command": "workbench.action.closeSidebar", 
+    },
+    {
+        "key": "ctrl+h", 
+        "command": "workbench.action.focusPreviousPart"
+    },
+    {
+        "key": "ctrl+l", 
+        "command": "workbench.action.focusNextPart"
+    }
+
+]
