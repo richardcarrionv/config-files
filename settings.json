@@ -1,0 +1,31 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Gruvbox Dark (Hard)",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.lineNumbers": "relative",
+    "bracketPairColorizer.depreciation-notice": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "prettier.tabWidth": 4,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "vim.useSystemClipboard": true,
+    "prettier.useTabs": false,
+    "editor.renderIndentGuides": false
+}
