@@ -12,21 +12,35 @@
     },
     {
         "key": "ctrl+n",
-        "command": "workbench.view.explorer",
-
+        "command": "workbench.view.explorer"
     },
     {
         "key": "ctrl+n",
         "when": "sideBarVisible",
-        "command": "workbench.action.closeSidebar", 
+        "command": "workbench.action.closeSidebar"
     },
     {
-        "key": "ctrl+h", 
-        "command": "workbench.action.focusPreviousPart"
+        "key": "ctrl+h",
+        "command": "workbench.action.focusPreviousGroup"
     },
     {
-        "key": "ctrl+l", 
-        "command": "workbench.action.focusNextPart"
+        "key": "ctrl+l",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLastEditorGroup",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "s",
+        "command": "explorer.openToSide",
+        "when": "filesExplorerFocus"
     }
-
+    
 ]
