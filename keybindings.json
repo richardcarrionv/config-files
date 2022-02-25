@@ -2,7 +2,7 @@
 [
     //Crear archivo y carpeta cuando focus en el explorer
     {
-        "key": "a",
+        "key": "ctrl+a",
         "command": "explorer.newFile",
         "when": "filesExplorerFocus"
     },
@@ -46,7 +46,7 @@
 
     //Open vertical split
     {
-        "key": "s",
+        "key": "ctrl+s",
         "command": "explorer.openToSide",
         "when": "filesExplorerFocus"
     }
