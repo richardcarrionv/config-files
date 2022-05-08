@@ -13,11 +13,13 @@ call plug#begin('~/.nvim/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
     Plug 'rakr/vim-one'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
+
 "Prettier formateo
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
 "Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -44,6 +46,9 @@ set incsearch
 
 "Resalta todos los matches cuando buscas con / 
 set hlsearch
+
+"Abre los splits a la derecha y no a la izquierda
+set splitright
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -258,3 +263,10 @@ let g:closetag_shortcut = '>'
 " Add > at current position without closing the current tag, default is ''
 "
 let g:closetag_close_shortcut = '<leader>>'
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Files<cr>
+nnoremap <leader>tt <cmd> vsplit \| terminal <Enter>
+
+let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
+
