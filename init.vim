@@ -20,6 +20,8 @@ call plug#end()
 "Prettier formateo
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
+set termguicolors
+
 "Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
@@ -273,3 +275,19 @@ nnoremap <leader>t <cmd> vsplit \| terminal <Enter>
 
 let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
 
+" Customize fzf colors to match your color scheme                                          
+" - fzf#wrap translates this to a set of `--color` options                                 
+let g:fzf_colors =                                                                         
+\ { 'fg':      ['fg', 'Normal'],                                                           
+  \ 'bg':      ['bg', 'Normal'],                                                           
+  \ 'hl':      ['fg', 'Comment'],                                                          
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],                             
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],                                       
+  \ 'hl+':     ['fg', 'Statement'],                                                        
+  \ 'info':    ['fg', 'PreProc'],                                                          
+  \ 'border':  ['fg', 'Ignore'],                                                           
+  \ 'prompt':  ['fg', 'Conditional'],                                                      
+  \ 'pointer': ['fg', 'Exception'],                                                        
+  \ 'marker':  ['fg', 'Keyword'],                                                          
+  \ 'spinner': ['fg', 'Label'],                                                            
+  \ 'header':  ['fg', 'Comment'] } 
