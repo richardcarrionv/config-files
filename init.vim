@@ -272,3 +272,4 @@ nnoremap <leader>nn <cmd>NERDTreeFocus<cr>
 nnoremap <leader>t <cmd> vsplit \| terminal <Enter>
 
 let $PATH = "C:\\Program Files\\Git\\usr\\bin;" . $PATH
+
