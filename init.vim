@@ -266,7 +266,7 @@ let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Files<cr>
+nnoremap <leader>ff <cmd>GFiles<cr>
 nnoremap <leader>nf <cmd>NERDTreeFind<cr>
 nnoremap <leader>nn <cmd>NERDTreeFocus<cr>
 nnoremap <leader>t <cmd> vsplit \| terminal <Enter>
