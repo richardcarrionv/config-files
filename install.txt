@@ -1,0 +1,7 @@
+choco
+bat
+fzf
+vim-plug
+autohotkey
+oh-my-posh
+node.js
