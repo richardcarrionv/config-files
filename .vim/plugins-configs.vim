@@ -1,5 +1,5 @@
 "fzf find hidden files
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+"let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -92,7 +92,6 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " Run the Code Lens action on the current line.
 nmap <leader>cl  <Plug>(coc-codelens-action)
 
-" Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
@@ -214,3 +213,25 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],                                                          
   \ 'spinner': ['fg', 'Label'],                                                            
   \ 'header':  ['fg', 'Comment'] } 
+" This is necessary for VimTeX to load properly. The "indent" is optional.
+" Note that most plugin managers will do this automatically.
+filetype plugin indent on
+
+" This enables Vim's and neovim's syntax-related features. Without this, some
+" VimTeX features will not work (see ":help vimtex-requirements" for more
+" info).
+syntax enable
+
+let g:vimtex_view_method = 'SumatraPDF.exe'
+
+" Or with a generic interface:
+let g:vimtex_view_general_viewer = 'SumatraPDF.exe'
+let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
+
+" Most VimTeX mappings rely on localleader and this can be changed with the
+" following line. The default is usually fine and is the symbol "\".
+let maplocalleader = ","
+
+let g:vimtex_compiler_latexmk = {
+            \ 'build_dir' : 'vimtex-build',
+            \}

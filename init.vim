@@ -1,12 +1,14 @@
+" Clipboard del system
+set clipboard=unnamedplus
+
 so ~/config-files/.vim/plugins.vim
 so ~/config-files/.vim/plugins-configs.vim
 so ~/config-files/.vim/maps.vim
 
-autocmd VimEnter * NERDTree
-
-
-" Clipboard del system
-set clipboard=unnamedplus
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+autocmd Filetype tex setl updatetime=1
 
 "Mostrar numero de linea
 set number
@@ -47,8 +49,8 @@ set encoding=utf-8
 set hidden
 
 " Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
+"set nobackup
+"set nowritebackup
 
 " Give more space for displaying messages.
 set cmdheight=2

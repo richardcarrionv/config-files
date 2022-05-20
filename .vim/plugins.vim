@@ -2,7 +2,7 @@ call plug#begin('~/.nvim/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'preservim/nerdtree'
     Plug 'morhetz/gruvbox'
-    Plug 'christoomey/vim-tmux-navigator'
+    "Plug 'christoomey/vim-tmux-navigator'
     Plug 'ryanoasis/vim-devicons'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -12,6 +12,8 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'sheerun/vim-polyglot'
+    Plug 'tpope/vim-surround'
+    Plug 'lervag/vimtex'
 call plug#end()
 
 
