@@ -3,10 +3,17 @@
 let mapleader = " "
 
 nnoremap <leader><Enter> o<Esc>
-nnoremap <leader>ff <cmd>Files<cr>
+"nnoremap <leader>ff <cmd>Files<cr>
 nnoremap <leader>fm <cmd>CocCommand prettier.forceFormatDocument<cr>
 
-nnoremap <leader>gf <cmd>GFiles<cr>
+nnoremap <silent> <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
+nnoremap <silent> <expr> <Leader>gf (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
+nnoremap <silent> <expr> <Leader>ag (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Ag\<cr>"
+nnoremap <silent> <expr> <Leader>bf (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
+
+nnoremap <silent> <expr> <Leader>df (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files %:p:h\<cr>"
+
+"nnoremap <leader>gf <cmd>GFiles<cr>
 
 nnoremap <leader>nf <cmd>NERDTreeFind<cr>
 nnoremap <leader>nn <cmd>NERDTreeFocus<cr>
@@ -24,24 +31,19 @@ nnoremap <leader>+ 10 <C-w>+
 nnoremap <leader>- 10 <C-w>-
 
 "Nav through tabs
-map <C-h> :tabprevious<cr>
-map <C-l> :tabnext<cr>
+map <leader>h :tabprevious<cr>
+map <leader>l :tabnext<cr>
 
-"Nav through panels
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
 
 "Vimtex maps
 nnoremap <leader>tx <Plug>(vimtex-compile)
 nnoremap <leader>tv <Plug>(vimtex-view)
 
 "Open buffers with fzf
-map <leader>bf :Buffers<cr>
+"map <leader>bf :Buffers<cr>
 
 "String search
-map <leader>ag :Ag<cr>
+"map <leader>ag :Ag<cr>
 
 "Ctrl+n para abrir NERDTree
 nmap <C-n> :NERDTreeToggle<CR> 
