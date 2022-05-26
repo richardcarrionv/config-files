@@ -214,6 +214,8 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],                                                          
   \ 'spinner': ['fg', 'Label'],                                                            
   \ 'header':  ['fg', 'Comment'] } 
+
+let g:fzf_layout = { 'down': '~35%' }
 " This is necessary for VimTeX to load properly. The "indent" is optional.
 " Note that most plugin managers will do this automatically.
 filetype plugin indent on

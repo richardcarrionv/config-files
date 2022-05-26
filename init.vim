@@ -14,6 +14,8 @@ autocmd Filetype tex setl updatetime=1
 "autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
 "    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
+"No wrap final de linea
+set nowrap
 "Mostrar numero de linea
 set number
 
@@ -31,6 +33,10 @@ set expandtab
 
 "Color
 colorscheme gruvbox
+
+let g:gruvbox_contrast_dark = "hard"
+
+let g:gruvbox_termcolors = "256"
 
 
 "Para mostrar numero en el editor

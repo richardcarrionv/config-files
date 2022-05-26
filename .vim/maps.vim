@@ -5,11 +5,14 @@ let mapleader = " "
 nnoremap <leader><Enter> o<Esc>
 "nnoremap <leader>ff <cmd>Files<cr>
 nnoremap <leader>fm <cmd>CocCommand prettier.forceFormatDocument<cr>
+nnoremap <leader>w <cmd>:w<cr>
+nnoremap <leader>q <cmd>:q<cr>
 
 nnoremap <silent> <expr> <Leader>ff (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files\<cr>"
 nnoremap <silent> <expr> <Leader>gf (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":GFiles\<cr>"
 nnoremap <silent> <expr> <Leader>ag (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Ag\<cr>"
 nnoremap <silent> <expr> <Leader>bf (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Buffers\<cr>"
+nnoremap <silent> <expr> <Leader>dg (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":CocDiagnostics\<cr>"
 
 nnoremap <silent> <expr> <Leader>df (expand('%') =~ 'NERD_tree' ? "\<c-w>\<c-w>" : '').":Files %:p:h\<cr>"
 

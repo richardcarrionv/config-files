@@ -12,8 +12,10 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'sheerun/vim-polyglot'
+    "Plug 'pangloss/vim-javascript' 
     Plug 'tpope/vim-surround'
     Plug 'lervag/vimtex'
+    Plug 'preservim/nerdcommenter'
 call plug#end()
 
 
