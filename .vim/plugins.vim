@@ -12,10 +12,16 @@ call plug#begin('~/.nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'sheerun/vim-polyglot'
-    "Plug 'pangloss/vim-javascript' 
     Plug 'tpope/vim-surround'
     Plug 'lervag/vimtex'
     Plug 'preservim/nerdcommenter'
+    Plug 'OmniSharp/omnisharp-vim'
+    Plug 'tpope/vim-fugitive'
+    " post install (yarn install | npm install) then load plugin only for editing supported files
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+    "Plug 'kyazdani42/nvim-web-devicons'
+    "Plug 'romgrk/barbar.nvim'
+    Plug 'gcmt/taboo.vim'
 call plug#end()
 
 
