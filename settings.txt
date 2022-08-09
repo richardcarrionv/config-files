@@ -1,0 +1,23 @@
+# KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT=""
+XKBOPTIONS=""
+XKBOPTIONS="ctrl:swapcaps"
+
+BACKSPACE="guess"
+
+
+URxvt.font:                       xft:Hack Nerd Font Mono:style=Regular:size=12
+! nerd fonts: must use Mono variant in order for fontawesome icons to show correctly (ie in ranger devicons)
+! nerd fonts hack installed from package nerd-fonts-hack
+URxvt*font: xft:Hack Nerd Font Mono:style=Regular:size=12
+URxvt*boldFont: xft:Hack Nerd Font Mono:style=Bold:size=12
+URxvt*italicFont: xft:Hack Nerd Font Mono:style=Italic:size=12
+! The font list to use for displaying bold, italic or bold italic characters, respectively.
+URxvt*boldItalicFont: xft:Hack Nerd Font Mono:size=11:bold:italic
+! nerd fonts: must use Mono variant in order for fontawesome icons to show correctly (ie in ranger devicons)
+
