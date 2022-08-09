@@ -1,5 +1,7 @@
 # KEYBOARD CONFIGURATION FILE
 
+Test
+
 # Consult the keyboard(5) manual page.
 
 XKBMODEL="pc105"
