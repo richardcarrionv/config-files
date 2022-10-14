@@ -1,54 +1,87 @@
 {
-	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-	"final_space": false,
-	"osc99": false,
-	"console_title": false,
-	"blocks": [
-		{
-			"type": "prompt",
-			"alignment": "left",
-			"horizontal_offset": 0,
-			"vertical_offset": 0,
-			"segments": [
-				{
-					"type": "path",
-					"style": "plain",
-					"invert_powerline": false,
-					"foreground": "#55B9C4",
-					"properties": {
-						"prefix": "<#04c494>┌ </>",
-						"style": "full"
-					}
-				},
-				{
-					"type": "git",
-					"style": "plain",
-					"invert_powerline": false,
-					"foreground": "#ff94df",
-					"properties": {
-						"branch_icon": " <#ff94df><b> </b></>",
-						"display_stash_count": true,
-						"display_status": false,
-						"prefix": "<#ffffff>on</> "
-					}
-				}
-			]
-		},
-		{
-			"type": "prompt",
-			"alignment": "left",
-			"newline": true,
-			"segments": [
-				{
-					"type": "text",
-					"style": "plain",
-					"foreground": "#04c494",
-					"properties": {
-						"prefix": "<#04c494>└</>",
-						"text": ">"
-					}
-				}
-			]
-		}
-	]
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "foreground": "#55B9C4",
+                    "properties": {
+                        "style": "full"
+                    },
+                    "style": "plain",
+                    "template": "<#04c494>\u250c </>",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}#e91e63{{ end }}"
+                    ],
+                    "type": "path"
+                },
+                {
+                    "foreground": "#55B9C4",
+                    "properties": {
+                        "style": "full"
+                    },
+                    "style": "plain",
+                    "template": "{{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "foreground": "#ff94df",
+                    "properties": {
+                        "branch_icon": " <#ff94df><b>\ue0a0 </b></>",
+                        "fetch_stash_count": true,
+                        "fetch_status": false
+                    },
+                    "style": "plain",
+                    "template": "<#ffffff>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} ",
+                    "type": "git"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "segments": [
+                {
+                    "background": "transparent",
+                    "foreground": "#b3ffde",
+                    "properties": {
+                        "style": "austin",
+                        "threshold": 0
+                    },
+                    "style": "plain",
+                    "template": "{{.FormattedMs}}",
+                    "type": "executiontime"
+                },
+                {
+                    "background": "transparent",
+                    "foreground": "#55B9C4",
+                    "properties": {
+                        "time_format": "Mon, 02 Jan 2006 15:04:05"
+                    },
+                    "style": "plain",
+                    "template": "<p:white> · </>{{.CurrentDate | date .Format}}",
+                    "type": "time"
+                }
+            ]
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#04c494",
+                    "style": "plain",
+                    "template": "<#04c494>\u2514</>> ",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}#e91e63{{ end }}"
+                    ],
+                    "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "version": 2
 }
