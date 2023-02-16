@@ -7,6 +7,7 @@ Ctrl::Capslock
 LControl & RAlt::RAlt
 LAlt::Shift
 
+
 !a::
     SendInput, á
     return
